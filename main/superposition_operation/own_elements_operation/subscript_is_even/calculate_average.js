@@ -1,7 +1,6 @@
 'use strict';
 var calculate_average = function(collection){
   collection = getEvenElement(collection);
-  console.log(collection);
   return computeAverage(collection);
 };
 
