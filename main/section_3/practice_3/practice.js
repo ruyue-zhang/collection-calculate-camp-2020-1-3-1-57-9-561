@@ -8,7 +8,7 @@ function create_updated_collection(collection_a, object_b) {
 function groupingCount(collection) {
   let object = {};
   collection.forEach(element => {
-    element in object ? object[element]++ : object[element] = 1;
+      element in object ? object[element]++ : object[element] = 1;
   });
   return object;
 }
