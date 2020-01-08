@@ -6,4 +6,5 @@ function choose_no_repeat_number(collection) {
     return collection.indexOf(element) === index;  
   });
 }
+
 module.exports = choose_no_repeat_number;
