@@ -6,7 +6,7 @@ var calculate_average = function(collection){
 
 function getEvenElement(collection) {
   return collection.filter((currentValue, index)=>{
-    return index % 2;
+    return index % 2; //TODO: 不用写return, 如果只有一行实现
   })
 }
 

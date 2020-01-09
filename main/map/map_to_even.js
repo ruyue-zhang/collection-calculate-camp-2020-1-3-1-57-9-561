@@ -2,7 +2,7 @@
 
 function map_to_even(collection){
   return collection.map(element=>{
-    return element * 2;
+    return element * 2; //TODO: 不用写return, 如果只有一行实现
   })
 }
 

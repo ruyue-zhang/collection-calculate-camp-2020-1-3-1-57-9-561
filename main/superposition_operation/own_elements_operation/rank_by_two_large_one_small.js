@@ -7,7 +7,7 @@ function rank_by_two_large_one_small(collection){
 
 function rankAsc(collection) {
   collection.sort((a, b)=>{
-    return a - b;
+    return a - b; //TODO: 不用写return, 如果只有一行实现
   });
 }
 
@@ -26,7 +26,7 @@ function sortByTwoLargeOneSmall(collection) {
     }
     else {
       result.push(collection[i]);
-    } 
+    }
   }
   return result;
 }

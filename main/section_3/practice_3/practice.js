@@ -1,7 +1,7 @@
 function create_updated_collection(collection_a, object_b) {
   //在这里写入代码
   collection_a = groupingCount(collection_a);
-  collection_a = objectToArrObj(collection_a)
+  collection_a = objectToArrObj(collection_a) //TODO: 少分号
   return createUpdatedCollection(collection_a, object_b);
 }
 

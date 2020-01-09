@@ -8,7 +8,7 @@ function compute_median(collection) {
 
 function arraySortAsc(collection) {
   collection.sort((a,b)=>{
-    return a - b;
+    return a - b; //TODO: 不用写return, 如果只有一行实现
   });
 }
 

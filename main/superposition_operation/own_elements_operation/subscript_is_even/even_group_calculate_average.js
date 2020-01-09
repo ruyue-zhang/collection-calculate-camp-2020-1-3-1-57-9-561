@@ -1,10 +1,10 @@
 'use strict';
 var even_group_calculate_average = function(collection){
-  collection = getEvenElement(collection);
+  collection = getEvenElement(collection); //TODO: 尽量避免修改传入参数的值
   collection = collectAllEven(collection);
   if(collection.length) {
-    let classArray = classifyByOneBits(collection); 
-    return computeAverage(classArray) 
+    let classArray = classifyByOneBits(collection);
+    return computeAverage(classArray)
   } else {
     return [0];
   }
@@ -12,17 +12,17 @@ var even_group_calculate_average = function(collection){
 
 function getEvenElement(collection) {
   return collection.filter((currentValue, index)=>{
-    return index % 2;
+    return index % 2; //TODO: 不用写return, 如果只有一行实现
   })
 }
 
 function collectAllEven(collection) {
-  return collection.filter(value=>{return !(value % 2)});
+  return collection.filter(value=>{return !(value % 2)}); //TODO: 不用写return, 如果只有一行实现
 }
 
 function classifyByOneBits(collection) {
   let classArray = [];
-  let oneBit = collection.filter(element=>{return element < 10});
+  let oneBit = collection.filter(element=>{return element < 10}); //TODO: 同上
   let twoBit = collection.filter(element=>{return element >= 10 && element < 100});
   let threeBit = collection.filter(element=>{return element >= 100 && element < 1000});
   classArray.push(oneBit);
@@ -44,8 +44,8 @@ function computeAverage(classArray) {
         }
       });
       result.push(average);
-    } 
-  }) 
+    }
+  }) //TODO: 少分号
   return result;
 }
 

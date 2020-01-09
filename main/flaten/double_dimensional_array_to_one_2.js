@@ -10,7 +10,7 @@ const flatten = arr => arr.reduce((pre, val) => pre.concat(Array.isArray(val) ? 
 
 function chooseNoRepeatNumber(collection) {
   return collection.filter((element,index)=>{
-    return collection.indexOf(element) === index;  
+    return collection.indexOf(element) === index; //TODO: 不用写return, 如果只有一行实现
   });
 }
 
