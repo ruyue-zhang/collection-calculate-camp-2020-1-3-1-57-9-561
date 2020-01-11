@@ -9,9 +9,7 @@ function double_to_one(collection) {
 const flatten = arr => arr.reduce((pre, val) => pre.concat(Array.isArray(val) ? flatten(val) : val), []);
 
 function chooseNoRepeatNumber(collection) {
-  return collection.filter((element,index)=>{
-    return collection.indexOf(element) === index;  
-  });
+  return collection.filter((element, index) => collection.indexOf(element) === index);
 }
 
 module.exports = double_to_one;
