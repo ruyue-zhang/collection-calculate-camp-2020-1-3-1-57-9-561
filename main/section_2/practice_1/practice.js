@@ -6,9 +6,7 @@ function count_same_elements(collection) {
 
 function groupingCount(collection) {
   let object = {};
-  collection.forEach(element => {
-    element in object ? object[element]++ : object[element] = 1;
-  });
+  collection.forEach(element => element in object ? object[element]++ : object[element] = 1);
   return object;
 }
 
