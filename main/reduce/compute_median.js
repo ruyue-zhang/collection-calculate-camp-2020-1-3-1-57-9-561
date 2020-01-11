@@ -2,18 +2,12 @@
 
 function compute_median(collection) {
   //在这里写入代码
-  arraySortAsc(collection);
+  collection.sort((a,b) => a - b);
   return getMedianNumber(collection);
 }
 
-function arraySortAsc(collection) {
-  collection.sort((a,b)=>{
-    return a - b;
-  });
-}
-
 function getMedianNumber(collection) {
-  var len = collection.length;
+  let len = collection.length;
   return  len % 2 ? collection[Math.floor(len / 2)] : (collection[len / 2] + collection[len / 2 - 1]) / 2;
 }
 
