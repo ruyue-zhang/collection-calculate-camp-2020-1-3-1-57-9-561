@@ -2,9 +2,9 @@
 
 function choose_divisible_integer(collection_a, collection_b) {
   //在这里写入代码
-  return collection_a.filter(element_a=>{
+  return collection_a.filter(element_a => {
     let isTrue = false;
-    collection_b.forEach(element_b=>{
+    collection_b.forEach(element_b => {
       if(0 === element_a % element_b) {
         isTrue = true;
       }
