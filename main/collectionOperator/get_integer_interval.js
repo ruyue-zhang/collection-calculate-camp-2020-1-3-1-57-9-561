@@ -13,7 +13,7 @@ function get_integer_interval(number_a, number_b) {
   }
 }
 
-function getIncrease(min,max,result) {
+function getIncrease(min, max, result) {
   for(let i = min; i <= max; i++) {
     result.push(i);
   }

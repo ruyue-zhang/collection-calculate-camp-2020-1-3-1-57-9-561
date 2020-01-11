@@ -13,14 +13,14 @@ function get_integer_interval_2(number_a, number_b) {
   }
 }
 
-function getIncrease(min,max,result) {
+function getIncrease(min, max, result) {
   for(let i = min; i <= max; i++) {
     result.push(i);
   }
 }
 
 function collectAllEven(collection) {
-  return collection.filter(value=>{return !(value % 2)});
+  return collection.filter(value => !(value % 2));
 }
 
 module.exports = get_integer_interval_2;
