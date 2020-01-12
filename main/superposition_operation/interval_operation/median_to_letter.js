@@ -7,7 +7,7 @@ function median_to_letter(collection) {
 }
 
 function getMedianNumber(collection) {
-  var len = collection.length;
+  let len = collection.length;
   return  len % 2 ? collection[Math.floor(len / 2)] : (collection[len / 2] + collection[len / 2 - 1]) / 2;
 }
 

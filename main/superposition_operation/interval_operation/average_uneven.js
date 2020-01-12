@@ -2,12 +2,8 @@
 
 function average_uneven(collection) {
   //在这里写入代码
-  collection = collectAllOdd(collection);
-  return getAverage(collection);
-}
-
-function collectAllOdd(collection) {
-  return collection.filter(value=>{return value % 2});
+  let allEven = collection.filter(value => value % 2);
+  return getAverage(allEven);
 }
 
 function getAverage(collection) {
