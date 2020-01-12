@@ -1,14 +1,8 @@
 'use strict';
 var calculate_average = function(collection){
-  collection = getEvenElement(collection);
-  return computeAverage(collection);
+  let allEvneth = collection.filter((currentValue, index) => index % 2);
+  return computeAverage(allEvneth);
 };
-
-function getEvenElement(collection) {
-  return collection.filter((currentValue, index)=>{
-    return index % 2;
-  })
-}
 
 function computeAverage(collection) {
   return collection.reduce((total,value,index)=>{

@@ -1,14 +1,8 @@
 'use strict';
 var calculate_median = function(collection){
-  collection = getEvenElement(collection);
-  return getMedianNumber(collection);
+  let allOddth = collection.filter((currentValue, index) => index % 2);
+  return getMedianNumber(allOddth);
 };
-
-function getEvenElement(collection) {
-  return collection.filter((currentValue, index)=>{
-    return index % 2;
-  })
-}
 
 function getMedianNumber(collection) {
   var len = collection.length;

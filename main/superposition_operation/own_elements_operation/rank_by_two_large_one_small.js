@@ -1,20 +1,14 @@
 'use strict';
 
 function rank_by_two_large_one_small(collection){
-  rankAsc(collection);
+  collection.sort((a, b) => a - b);
   return sortByTwoLargeOneSmall(collection);
 }
 
-function rankAsc(collection) {
-  collection.sort((a, b)=>{
-    return a - b;
-  });
-}
-
 function sortByTwoLargeOneSmall(collection) {
-  var result = [];
-  var len = collection.length;
-  for(var i = 0; i < len; i += 3) {
+  let result = [];
+  let len = collection.length;
+  for(let i = 0; i < len; i += 3) {
     if(i + 2 < len) {
       result.push(collection[i + 1]);
       result.push(collection[i + 2]);

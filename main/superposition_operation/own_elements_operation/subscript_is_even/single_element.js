@@ -1,21 +1,15 @@
 'use strict';
 
 var single_element = function(collection){
-  collection = getEvenElement(collection);
-  return getNoRepeatElementArray(collection);
+  let allOdd = collection.filter((currentValue, index) => index % 2);
+  return getNoRepeatElementArray(allOdd);
 };
 
-function getEvenElement(collection) {
-  return collection.filter((currentValue, index)=>{
-    return index % 2;
-  })
-}
-
 function getNoRepeatElementArray(evenElement) {
-  var noRepeatElement = [];
-  var len = evenElement.length;
+  let noRepeatElement = [];
+  let len = evenElement.length;
   for(let i = 0; i < len; i++) {
-    var isExist = false;
+    let isExist = false;
     for(let j = 0; j < len; j++) {
       if(i === j) {
         continue;

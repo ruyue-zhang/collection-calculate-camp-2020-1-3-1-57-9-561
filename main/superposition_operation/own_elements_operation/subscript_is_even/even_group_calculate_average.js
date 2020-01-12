@@ -1,24 +1,14 @@
 'use strict';
 var even_group_calculate_average = function(collection){
-  collection = getEvenElement(collection);
-  collection = collectAllEven(collection);
-  if(collection.length) {
-    let classArray = classifyByOneBits(collection); 
+  let allOddth = collection.filter((currentValue, index) => index % 2);
+  let allOdd = allOddth.filter(value=>{return !(value % 2)});
+  if(allOdd.length) {
+    let classArray = classifyByOneBits(allOdd); 
     return computeAverage(classArray) 
   } else {
     return [0];
   }
 };
-
-function getEvenElement(collection) {
-  return collection.filter((currentValue, index)=>{
-    return index % 2;
-  })
-}
-
-function collectAllEven(collection) {
-  return collection.filter(value=>{return !(value % 2)});
-}
 
 function classifyByOneBits(collection) {
   let classArray = [];
@@ -33,9 +23,9 @@ function classifyByOneBits(collection) {
 
 function computeAverage(classArray) {
   let result = [];
-  classArray.forEach(value=>{
+  classArray.forEach(value => {
     if(value.length > 0) {
-      let average = value.reduce((total,currentValue,index)=>{
+      let average = value.reduce((total,currentValue,index) => {
         if(index === value.length - 1) {
           return (total + currentValue) / value.length;
         }
@@ -45,7 +35,7 @@ function computeAverage(classArray) {
       });
       result.push(average);
     } 
-  }) 
+  });
   return result;
 }
 
